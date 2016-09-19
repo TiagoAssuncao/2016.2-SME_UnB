@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}
 {% endblock %}
-<title>Deletar  Usuario</title>
+<title>{% trans "Delete User" %}</title>
 
 {% block body %}
 
@@ -11,7 +12,7 @@
 
 
 
-      <h1>Deletar usuario</h1>
+      <h1>{% trans "Delete User" %}</h1>
       <p2>{{info}}</p2>
 
       <h1> </h1>
@@ -21,8 +22,8 @@
         {% csrf_token %}
 
         </div>
-          <button type="submit" class="btn btn-danger" href="{% url 'users:list_user_delete' %}" style="width: 520px; height: 50px">Apagar</button>
-        <p><a class="btn btn-primary btn-lg" href="{% url 'users:list_user_delete' %}" role="button" style="width: 520px; height: 50px">Cancelar &raquo;</a></p>
+          <button type="submit" class="btn btn-danger" href="{% url 'users:list_user_delete' %}" style="width: 520px; height: 50px">{% trans "Delete" %}</button>
+        <p><a class="btn btn-primary btn-lg" href="{% url 'users:list_user_delete' %}" role="button" style="width: 520px; height: 50px">{% trans "Cancel" %} &raquo;</a></p>
 
     </form>
 
@@ -36,6 +37,6 @@
     <div class="form-group">
         <input type="password" name ="Password" placeholder="Password" class="form-control">
     </div>
-    <button type="submit" class="btn btn-success">Sign in</button>
+    <button type="submit" class="btn btn-success">{% trans "Sign in" %}</button>
 </form>
 {% endblock %}

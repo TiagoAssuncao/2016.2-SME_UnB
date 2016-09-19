@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}
 {% endblock %}
-<title>Novo Usuario</title>
+<title>{% trans "Edit User" %}</title>
 
 {% block body %}
 
 <div class="jumbotron">
   <div class="container">
 
-      <h1>Editar usuario</h1>
+      <h1>{% trans "Edit User" %}</h1>
       <p2>{{info}}</p2>
 
       <h1> </h1>
@@ -31,41 +32,41 @@
 
 
         <div class="form-group">
-            <input type="password" name ="password" placeholder="Nova Senha" class="form-control">
+            <input type="password" name ="password" placeholder="{% trans "New Password" %}" class="form-control">
         </div>
 
         <div class="form-group">
-            <input type="password" name ="confirmPassword" placeholder="confirmar nova senha" class="form-control">
+            <input type="password" name ="confirmPassword" placeholder="{% trans "Confirm New Password" %}" class="form-control">
         </div>
 
-        <p1>Tipo de usuario:</p1>
+        <p1>{% trans "User Type" %}:</p1>
         <div class="form-group">
             <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Usuario Comum
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">{% trans "Common User" %}
             </label>
             <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Adiministrador
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> {% trans "Adiministrator" %}
             </label>
 
         </div>
 
-        <p1>Nivel de acesso:</p1>
+        <p1>{% trans "Access Level:" %}:</p1>
         <div class="form-group">
 
             <label class="checkbox-inline checkbox-success">
-                <input type="checkbox" id="inlineCheckbox1" value="option1"> Visualizar Graficos
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> {% trans "See Graphics" %}
             </label>
             <label class="checkbox-inline checkbox-success">
-                <input type="checkbox" id="inlineCheckbox2" value="option2"> Gerar Relatorios
+                <input type="checkbox" id="inlineCheckbox2" value="option2">{% trans "Edit Users" %}
             </label>
             <label class="checkbox-inline checkbox-success">
-                <input type="checkbox" id="inlineCheckbox3" value="option3"> Depois Penso
+                <input type="checkbox" id="inlineCheckbox3" value="option3">{% trans "Delete Users" %}
             </label>
 
         </div>
-        <button type="submit" class="btn btn-success" style="width: 520px; height: 50px">Registrar</button>
+        <button type="submit" class="btn btn-success" style="width: 520px; height: 50px">{% trans "Save" %}</button>
 
-        <p><a class="btn btn-primary btn-lg" href="{% url 'users:list_user_edit' %}" role="button" style="width: 520px; height: 50px">Cancelar &raquo;</a></p>
+        <p><a class="btn btn-primary btn-lg" href="{% url 'users:list_user_edit' %}" role="button" style="width: 520px; height: 50px">{% trans "Cancel" %} &raquo;</a></p>
 
 
     </form>
@@ -83,6 +84,6 @@
     <div class="form-group">
         <input type="password" name ="Password" placeholder="Password" class="form-control">
     </div>
-    <button type="submit" class="btn btn-success">Sign in</button>
+    <button type="submit" class="btn btn-success">{% trans "Sing in" %}</button>
 </form>
 {% endblock %}

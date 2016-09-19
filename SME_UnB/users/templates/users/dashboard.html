@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block title %}
     <title>SME - UnB</title>
 {% endblock %}
@@ -11,10 +11,10 @@
         <ul class="breadcrumb">
             {% block breadcrumb %}
             <li><a href="{% url 'index' %}">HOME</a></li>
-            <li><a href="{% url 'users:logout' %}">Logout</a></li>
-            <li><a href="{% url 'users:register' %}">Registrar</a></li>
-            <li><a href="{% url 'users:list_user_edit' %}">Editar Usuarios</a></li>
-            <li><a href="{% url 'users:list_user_delete' %}">Deletar Usuarios</a></li>
+            <li><a href="{% url 'users:logout' %}">{% trans "Logout" %}</a></li>
+            <li><a href="{% url 'users:register' %}">{% trans "Register" %}</a></li>
+            <li><a href="{% url 'users:list_user_edit' %}">{% trans "Edit Users" %}</a></li>
+            <li><a href="{% url 'users:list_user_delete' %}">{% trans "Delete Users" %}</a></li>
 
 
             {% endblock %}
@@ -23,13 +23,13 @@
     <div class="pure-u-2-3">
         <div class="inner">
             {% block dashboard_content %}
-            <p><strong>Usuário</strong>: {{ user }}</p>
-            <p><strong>E-mail</strong>: {{ user.email }}</p>
+            <p><strong>{% trans "User" %}</strong>: {{ user }}</p>
+            <p><strong>{% trans "E-mail" %}</strong>: {{ user.email }}</p>
             {% endblock %}
         </div>
     </div>
 </div>
 {% endblock %}
 {% else %}
-<p><a href="{% url 'users:login' %}">Login</a>.</p>
+<p><a href="{% url 'users:login' %}">{% trans "Login" %}</a>.</p>
 {% endif %}
