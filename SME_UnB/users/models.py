@@ -4,6 +4,8 @@ from django.utils.translation import gettext as _
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 
+from django.utils.translation import ugettext_lazy
+
 class EmailUserManager(BaseUserManager):
     pass
 

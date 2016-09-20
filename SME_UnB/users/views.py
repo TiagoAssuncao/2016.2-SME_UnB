@@ -12,6 +12,8 @@ from django.contrib.auth.decorators import login_required
 
 from django.core.urlresolvers import reverse_lazy, reverse
 
+from django.utils.translation import ugettext
+
 def home(request):
     return render(request, 'users/home.html')
 
