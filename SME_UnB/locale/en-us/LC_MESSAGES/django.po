@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-20 00:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: users/templates/users/dashboard.html:14 users/templates/users/home.html:15
+msgid "Logout"
+msgstr ""
+
+#: users/templates/users/dashboard.html:15
+msgid "Register"
+msgstr ""
+
+#: users/templates/users/dashboard.html:16
+#: users/templates/users/edit_user.html:60
+msgid "Edit Users"
+msgstr ""
+
+#: users/templates/users/dashboard.html:17
+#: users/templates/users/edit_user.html:63
+msgid "Delete Users"
+msgstr ""
+
+#: users/templates/users/dashboard.html:26
+msgid "User"
+msgstr ""
+
+#: users/templates/users/dashboard.html:27
+msgid "E-mail"
+msgstr ""
+
+#: users/templates/users/dashboard.html:34
+msgid "Login"
+msgstr ""
+
+#: users/templates/users/delete_user.html:6
+#: users/templates/users/delete_user.html:15
+msgid "Delete User"
+msgstr ""
+
+#: users/templates/users/delete_user.html:25
+msgid "Delete"
+msgstr ""
+
+#: users/templates/users/delete_user.html:26
+#: users/templates/users/edit_user.html:69
+msgid "Cancel"
+msgstr ""
+
+#: users/templates/users/delete_user.html:40
+msgid "Sign in"
+msgstr ""
+
+#: users/templates/users/edit_user.html:6
+#: users/templates/users/edit_user.html:13
+msgid "Edit User"
+msgstr ""
+
+#: users/templates/users/edit_user.html:35
+msgid "New Password"
+msgstr ""
+
+#: users/templates/users/edit_user.html:39
+msgid "Confirm New Password"
+msgstr ""
+
+#: users/templates/users/edit_user.html:42
+msgid "User Type"
+msgstr ""
+
+#: users/templates/users/edit_user.html:45
+msgid "Common User"
+msgstr ""
+
+#: users/templates/users/edit_user.html:48
+msgid "Adiministrator"
+msgstr ""
+
+#: users/templates/users/edit_user.html:53
+msgid "Access Level:"
+msgstr ""
+
+#: users/templates/users/edit_user.html:57
+msgid "See Graphics"
+msgstr ""
+
+#: users/templates/users/edit_user.html:67
+msgid "Save"
+msgstr ""
+
+#: users/templates/users/edit_user.html:87
+msgid "Sing in"
+msgstr ""
+
+#: users/templates/users/home.html:9
+msgid "Welcome"
+msgstr ""
+
+#: users/templates/users/home.html:10
+msgid ""
+"SME - UnB is a web platform to monitor measurements from energy transductors"
+msgstr ""
+
+#: users/templates/users/home.html:11
+msgid "Learn more"
+msgstr ""
+
+#: users/templates/users/home.html:16
+msgid "Dashboard"
+msgstr ""
+
+#: users/templates/users/home.html:19
+msgid "Redirecting..."
+msgstr ""
+
+#: users/templates/users/list_user.html:5
+#: users/templates/users/list_user_delete.html:6
+#: users/templates/users/list_user_edit.html:5
+msgid "Registered Users List"
+msgstr ""
+
+#: users/templates/users/login.html:18
+msgid "Toggle navigation"
+msgstr ""
+
+#: users/templates/users/login.html:27
+msgid "About"
+msgstr ""
+
+#: users/templates/users/login.html:28
+msgid "Contact"
+msgstr ""
+
+#: users/templates/users/login.html:33 users/templates/users/login.html:39
+msgid "Log in"
+msgstr ""
+
+#: users/templates/users/login.html:34
+msgid "Email address"
+msgstr ""
+
+#: users/templates/users/login.html:36
+msgid "Password"
+msgstr ""
