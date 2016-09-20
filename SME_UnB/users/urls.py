@@ -1,5 +1,5 @@
-from django.conf.urls import url
-
+# -*- coding: utf-8 -*-
+from django.conf.urls import url, include
 from . import views
 
 app_name = 'users'
@@ -12,5 +12,7 @@ urlpatterns = [
     url(r'^list_user_edit/', views.list_user_edit, name="list_user_edit"),
     url(r'^list_user_delete/', views.list_user_delete, name="list_user_delete"),
     url(r'^edit_user/(?P<user_id>[0-9]+)/',views.edit_user, name="edit_user"),
-    url(r'^delete_user/(?P<user_id>[0-9]+)/',views.delete_user, name="delete_user"),
+    url(r'^delete_user/(?P<user_id>[0-9]+)/' , views.delete_user, name="delete_user"),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
+
     ]
