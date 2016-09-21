@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-20 00:43+0000\n"
+"POT-Creation-Date: 2016-09-21 15:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,176 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: users/templates/users/dashboard.html:14 users/templates/users/home.html:15
+#: templates/base.html:17 users/templates/users/login.html:18
+msgid "Toggle navigation"
+msgstr "Alternar Navegaçao"
+
+#: templates/base.html:27 templates/base.html:33
+msgid "Transductors"
+msgstr ""
+
+#: templates/base.html:28 templates/base.html:34
+#: users/templates/users/login.html:27
+msgid "About"
+msgstr "Sobre"
+
+#: templates/base.html:29 templates/base.html:35
+#: users/templates/users/login.html:28
+msgid "Contact"
+msgstr "Contato"
+
+#: templates/base.html:30
+msgid "My Account"
+msgstr ""
+
+#: templates/base.html:31 users/templates/users/dashboard.html:14
+#: users/templates/users/home.html:15
 msgid "Logout"
 msgstr "Sair"
+
+#: templates/base.html:36 users/templates/users/dashboard.html:34
+msgid "Login"
+msgstr "Entrar"
+
+#: templates/index.html:10
+#, fuzzy
+#| msgid "Welcome"
+msgid " Welcome"
+msgstr "Bem-Vindo"
+
+#: templates/index.html:11
+#, fuzzy
+#| msgid ""
+#| "SME - UnB is a web platform to monitor measurements from energy "
+#| "transductors"
+msgid ""
+"SME - UnB is a web platform to monitor measurements from energy "
+"transductors. "
+msgstr ""
+"SME - UnB é uma plataforma web para monitorar as medidas dos trandutores de "
+"energia"
+
+#: transductor/templates/transductor/detail.html:4
+msgid "Measurements Record "
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:25
+msgid " Phase A"
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:26
+msgid "Phase B "
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:27
+msgid "Phase C "
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:28
+msgid " Total"
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:33
+msgid "Voltage "
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:39
+msgid "Current "
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:45
+msgid " Active Power"
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:52
+msgid " Reactive Power"
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:59
+msgid " Apparent Power"
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:72
+msgid "previous "
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:80
+msgid " next"
+msgstr ""
+
+#: transductor/templates/transductor/detail.html:88
+msgid " No measurement avaiable"
+msgstr ""
+
+#: transductor/templates/transductor/index.html:4
+msgid " Transductors"
+msgstr ""
+
+#: transductor/templates/transductor/index.html:11
+msgid " Create Transductor"
+msgstr ""
+
+#: transductor/templates/transductor/index.html:15
+msgid " Description"
+msgstr ""
+
+#: transductor/templates/transductor/index.html:16
+msgid " IP Address"
+msgstr ""
+
+#: transductor/templates/transductor/index.html:17
+msgid " Serie Number"
+msgstr ""
+
+#: transductor/templates/transductor/index.html:18
+msgid " Options"
+msgstr ""
+
+#: transductor/templates/transductor/index.html:39
+#, fuzzy
+#| msgid "Registered Users List"
+msgid " No Registered Transducer"
+msgstr "Lista de Usuarios Registrados"
+
+#: transductor/templates/transductor/index.html:40
+msgid " To create a new transductor click"
+msgstr ""
+
+#: transductor/templates/transductor/model_index.html:4
+msgid "Transductors  Models"
+msgstr ""
+
+#: transductor/templates/transductor/model_index.html:12
+msgid "Name "
+msgstr ""
+
+#: transductor/templates/transductor/model_index.html:13
+msgid "Internet  Protocol"
+msgstr ""
+
+#: transductor/templates/transductor/model_index.html:14
+msgid "Serial  Protocol"
+msgstr ""
+
+#: transductor/templates/transductor/model_index.html:28
+#, fuzzy
+#| msgid "Register"
+msgid "Nothing Registered"
+msgstr "Registrar"
+
+#: transductor/templates/transductor/new.html:4
+#: transductor/templates/transductor/new.html:8
+msgid "New Transductor"
+msgstr ""
+
+#: transductor/templates/transductor/new.html:17
+#: users/templates/users/edit_user.html:67
+msgid "Save"
+msgstr "Salvar"
+
+#: users/templates/languages/languages.html:14
+msgid "Change Languages"
+msgstr ""
 
 #: users/templates/users/dashboard.html:15
 msgid "Register"
@@ -42,10 +209,6 @@ msgstr "Usuario"
 #: users/templates/users/dashboard.html:27
 msgid "E-mail"
 msgstr "E-mail"
-
-#: users/templates/users/dashboard.html:34
-msgid "Login"
-msgstr "Entrar"
 
 #: users/templates/users/delete_user.html:6
 #: users/templates/users/delete_user.html:15
@@ -98,10 +261,6 @@ msgstr "Nivel de Acesso:"
 msgid "See Graphics"
 msgstr "Ver Graficos"
 
-#: users/templates/users/edit_user.html:67
-msgid "Save"
-msgstr "Salvar"
-
 #: users/templates/users/edit_user.html:87
 msgid "Sing in"
 msgstr "Entrar"
@@ -113,7 +272,9 @@ msgstr "Bem-Vindo"
 #: users/templates/users/home.html:10
 msgid ""
 "SME - UnB is a web platform to monitor measurements from energy transductors"
-msgstr "SME - UnB é uma plataforma web para monitorar as medidas dos trandutores de energia"
+msgstr ""
+"SME - UnB é uma plataforma web para monitorar as medidas dos trandutores de "
+"energia"
 
 #: users/templates/users/home.html:11
 msgid "Learn more"
@@ -132,18 +293,6 @@ msgstr "Redirecionando .."
 #: users/templates/users/list_user_edit.html:5
 msgid "Registered Users List"
 msgstr "Lista de Usuarios Registrados"
-
-#: users/templates/users/login.html:18
-msgid "Toggle navigation"
-msgstr "Alternar Navegaçao"
-
-#: users/templates/users/login.html:27
-msgid "About"
-msgstr "Sobre"
-
-#: users/templates/users/login.html:28
-msgid "Contact"
-msgstr "Contato"
 
 #: users/templates/users/login.html:33 users/templates/users/login.html:39
 msgid "Log in"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-20 00:43+0000\n"
+"POT-Creation-Date: 2016-09-21 15:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,115 +17,262 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: users/templates/users/dashboard.html:14 users/templates/users/home.html:15
+#: templates/base.html:17 users/templates/users/login.html:18
+msgid "Toggle navigation"
+msgstr "Alternar Navvegação"
+
+#: templates/base.html:27 templates/base.html:33
+msgid "Transductors"
+msgstr "Transdutores"
+
+#: templates/base.html:28 templates/base.html:34
+#: users/templates/users/login.html:27
+msgid "About"
+msgstr "Sobre"
+
+#: templates/base.html:29 templates/base.html:35
+#: users/templates/users/login.html:28
+msgid "Contact"
+msgstr "Contato"
+
+#: templates/base.html:30
+msgid "My Account"
+msgstr "Minha conta"
+
+#: templates/base.html:31 users/templates/users/dashboard.html:14
+#: users/templates/users/home.html:15
 msgid "Logout"
-msgstr ""
+msgstr "Sair"
+
+#: templates/base.html:36 users/templates/users/dashboard.html:34
+msgid "Login"
+msgstr "Entrar"
+
+#: templates/index.html:10
+msgid " Welcome"
+msgstr "Bem-vindo"
+
+#: templates/index.html:11
+msgid ""
+"SME - UnB is a web platform to monitor measurements from energy "
+"transductors. "
+msgstr "SME - UnB é uma plataforma web para monitorar as medidas a partir dos condutores de energia"
+
+#: transductor/templates/transductor/detail.html:4
+msgid "Measurements Record "
+msgstr "Registro de Medições"
+
+#: transductor/templates/transductor/detail.html:25
+msgid " Phase A"
+msgstr "Fase A"
+
+#: transductor/templates/transductor/detail.html:26
+msgid "Phase B "
+msgstr "Fase B"
+
+#: transductor/templates/transductor/detail.html:27
+msgid "Phase C "
+msgstr "Fase C"
+
+#: transductor/templates/transductor/detail.html:28
+msgid " Total"
+msgstr "Total"
+
+#: transductor/templates/transductor/detail.html:33
+msgid "Voltage "
+msgstr "Voltage"
+
+#: transductor/templates/transductor/detail.html:39
+msgid "Current "
+msgstr "Corrent"
+
+#: transductor/templates/transductor/detail.html:45
+msgid " Active Power"
+msgstr "Ativar energia"
+
+#: transductor/templates/transductor/detail.html:52
+msgid " Reactive Power"
+msgstr "Reativar energia"
+
+#: transductor/templates/transductor/detail.html:59
+msgid " Apparent Power"
+msgstr "Energia aparente"
+
+#: transductor/templates/transductor/detail.html:72
+msgid "previous "
+msgstr "Anterior"
+
+#: transductor/templates/transductor/detail.html:80
+msgid " next"
+msgstr "Proximo"
+
+#: transductor/templates/transductor/detail.html:88
+msgid " No measurement avaiable"
+msgstr "Sem medidas disponiveis "
+
+#: transductor/templates/transductor/index.html:4
+msgid " Transductors"
+msgstr "Transdutores"
+
+#: transductor/templates/transductor/index.html:11
+msgid " Create Transductor"
+msgstr "Criar Transdutores"
+
+#: transductor/templates/transductor/index.html:15
+msgid " Description"
+msgstr "Descriçao"
+
+#: transductor/templates/transductor/index.html:16
+msgid " IP Address"
+msgstr "Endereço de IP"
+
+#: transductor/templates/transductor/index.html:17
+msgid " Serie Number"
+msgstr "Numero Serial"
+
+#: transductor/templates/transductor/index.html:18
+msgid " Options"
+msgstr "Opções"
+
+#: transductor/templates/transductor/index.html:39
+msgid " No Registered Transducer"
+msgstr "Sem Registro de transdutor"
+
+#: transductor/templates/transductor/index.html:40
+msgid " To create a new transductor click"
+msgstr "Clique aqui para criar um novo transdutor"
+
+#: transductor/templates/transductor/model_index.html:4
+msgid "Transductors  Models"
+msgstr "Modelo do Transdutor"
+
+#: transductor/templates/transductor/model_index.html:12
+msgid "Name "
+msgstr "Nome"
+
+#: transductor/templates/transductor/model_index.html:13
+msgid "Internet  Protocol"
+msgstr "Protocolo de Internet"
+
+#: transductor/templates/transductor/model_index.html:14
+msgid "Serial  Protocol"
+msgstr "Protocolo serial"
+
+#: transductor/templates/transductor/model_index.html:28
+msgid "Nothing Registered"
+msgstr "Nada registrado"
+
+#: transductor/templates/transductor/new.html:4
+#: transductor/templates/transductor/new.html:8
+msgid "New Transductor"
+msgstr "Novo Transdutor"
+
+#: transductor/templates/transductor/new.html:17
+#: users/templates/users/edit_user.html:67
+msgid "Save"
+msgstr "Salvar"
+
+#: users/templates/languages/languages.html:14
+msgid "Change Languages"
+msgstr "Mudar Lingua"
 
 #: users/templates/users/dashboard.html:15
 msgid "Register"
-msgstr ""
+msgstr "Registrar"
 
 #: users/templates/users/dashboard.html:16
 #: users/templates/users/edit_user.html:60
 msgid "Edit Users"
-msgstr ""
+msgstr "Editar usuario"
 
 #: users/templates/users/dashboard.html:17
 #: users/templates/users/edit_user.html:63
 msgid "Delete Users"
-msgstr ""
+msgstr "Deletar usuario"
 
 #: users/templates/users/dashboard.html:26
 msgid "User"
-msgstr ""
+msgstr "Usuario"
 
 #: users/templates/users/dashboard.html:27
 msgid "E-mail"
-msgstr ""
-
-#: users/templates/users/dashboard.html:34
-msgid "Login"
-msgstr ""
+msgstr "E-mail"
 
 #: users/templates/users/delete_user.html:6
 #: users/templates/users/delete_user.html:15
 msgid "Delete User"
-msgstr ""
+msgstr "Deletar Usuario"
 
 #: users/templates/users/delete_user.html:25
 msgid "Delete"
-msgstr ""
+msgstr "Deletar"
 
 #: users/templates/users/delete_user.html:26
 #: users/templates/users/edit_user.html:69
 msgid "Cancel"
-msgstr ""
+msgstr "Cancelar"
 
 #: users/templates/users/delete_user.html:40
 msgid "Sign in"
-msgstr ""
+msgstr "Entrar"
 
 #: users/templates/users/edit_user.html:6
 #: users/templates/users/edit_user.html:13
 msgid "Edit User"
-msgstr ""
+msgstr "Editar usuario"
 
 #: users/templates/users/edit_user.html:35
 msgid "New Password"
-msgstr ""
+msgstr "Nova senha"
 
 #: users/templates/users/edit_user.html:39
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Confirmar Nova Senha"
 
 #: users/templates/users/edit_user.html:42
 msgid "User Type"
-msgstr ""
+msgstr "Tipo de usuario"
 
 #: users/templates/users/edit_user.html:45
 msgid "Common User"
-msgstr ""
+msgstr "Usuario comum"
 
 #: users/templates/users/edit_user.html:48
 msgid "Adiministrator"
-msgstr ""
+msgstr "Administrador"
 
 #: users/templates/users/edit_user.html:53
 msgid "Access Level:"
-msgstr ""
+msgstr "Nivel de Acesso"
 
 #: users/templates/users/edit_user.html:57
 msgid "See Graphics"
-msgstr ""
-
-#: users/templates/users/edit_user.html:67
-msgid "Save"
-msgstr ""
+msgstr "Ver graficos"
 
 #: users/templates/users/edit_user.html:87
 msgid "Sing in"
-msgstr ""
+msgstr "Entrar"
 
 #: users/templates/users/home.html:9
 msgid "Welcome"
-msgstr ""
+msgstr "Bem-vindo"
 
 #: users/templates/users/home.html:10
 msgid ""
 "SME - UnB is a web platform to monitor measurements from energy transductors"
-msgstr ""
+msgstr "SME - UnB é uma plataforma web para monitorar as medidas a partir dos condutores de energia"
 
 #: users/templates/users/home.html:11
 msgid "Learn more"
-msgstr ""
+msgstr "Saiba mais"
 
 #: users/templates/users/home.html:16
 msgid "Dashboard"
-msgstr ""
+msgstr "Dashboard"
 
 #: users/templates/users/home.html:19
 msgid "Redirecting..."
-msgstr ""
+msgstr "Redirecionar"
 
 #: users/templates/users/list_user.html:5
 #: users/templates/users/list_user_delete.html:6
@@ -133,26 +280,14 @@ msgstr ""
 msgid "Registered Users List"
 msgstr ""
 
-#: users/templates/users/login.html:18
-msgid "Toggle navigation"
-msgstr ""
-
-#: users/templates/users/login.html:27
-msgid "About"
-msgstr ""
-
-#: users/templates/users/login.html:28
-msgid "Contact"
-msgstr ""
-
 #: users/templates/users/login.html:33 users/templates/users/login.html:39
 msgid "Log in"
-msgstr ""
+msgstr "Entrar"
 
 #: users/templates/users/login.html:34
 msgid "Email address"
-msgstr ""
+msgstr "Endereço de e-mail"
 
 #: users/templates/users/login.html:36
 msgid "Password"
-msgstr ""
+msgstr "Senha"
