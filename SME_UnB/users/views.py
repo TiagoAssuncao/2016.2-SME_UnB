@@ -133,13 +133,14 @@ def check_permissions(user):
     has_transductor_permission = 'checked' if user.has_perm('transductor.can_view_transductors') else ''
     has_edit_user_permission = 'checked' if user.has_perm('users.can_edit_user') else ''
     has_delete_user_permission = 'checked' if user.has_perm('users.can_delete_user') else ''
-
+    has_alerts_permission = 'checked' if user.has_perm('user.can_check_alerts') else ''
     context = {
         'user': user,
         "can_generate": has_report_permission,
         "view_transductors": has_transductor_permission,
         "edit_users": has_edit_user_permission,
         "delete_users": has_delete_user_permission,
+        "check_alerts": has_alerts_permission,
     }
 
     return context
@@ -204,6 +205,7 @@ def give_permission(request, user):
     transductor_checkbox = request.POST.get('view_transductors')
     useredit_checkbox = request.POST.get('edit_users')
     userdelete_checkbox = request.POST.get('delete_users')
+    alerts_checkbox = request.POST.get('alerts_permission')
 
     user.user_permissions.clear()
 
@@ -222,6 +224,9 @@ def give_permission(request, user):
     if userdelete_checkbox == 'on':
         has_deleteUser_permission = Permission.objects.get(codename='can_delete_user')
         user.user_permissions.add(has_deleteUser_permission)
+    if alerts_checkbox == 'on':
+        has_alerts_permission = Permission.objects.get(codename='can_check_alerts')
+        user.user_permissions.add(has_alerts_permission)
 
     user.save()
 

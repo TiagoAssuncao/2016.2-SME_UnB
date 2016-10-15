@@ -35,6 +35,7 @@ class Transductor(models.Model):
             ("can_view_transductors", "Can view Transductors Page"),
         )
 
+
 class EnergyTransductor(Transductor):
 
     def __str__(self):
@@ -62,9 +63,9 @@ class CurrentMeasurements(Measurements):
     MIN_CURRENT = 5.0
     MAX_CURRENT = 15.0
 
-    current_a = models.FloatField(default=None, validators=[MinValueValidator(MIN_CURRENT), MaxValueValidator(MAX_VOLTAGE)])
-    current_b = models.FloatField(default=None, validators=[MinValueValidator(MIN_VOLTAGE), MaxValueValidator(MAX_VOLTAGE)])
-    current_c = models.FloatField(default=None, validators=[MinValueValidator(MIN_VOLTAGE), MaxValueValidator(MAX_VOLTAGE)])
+    current_a = models.FloatField(default=None, validators=[MinValueValidator(MIN_CURRENT), MaxValueValidator(MAX_CURRENT)])
+    current_b = models.FloatField(default=None, validators=[MinValueValidator(MIN_CURRENT), MaxValueValidator(MAX_CURRENT)])
+    current_c = models.FloatField(default=None, validators=[MinValueValidator(MIN_CURRENT), MaxValueValidator(MAX_CURRENT)])
 
 
 class ActivePowerMeasurements(Measurements):
@@ -73,7 +74,7 @@ class ActivePowerMeasurements(Measurements):
 
     active_power_a = models.FloatField(default=None, validators=[MinValueValidator(MIN_ACTIVE), MaxValueValidator(MAX_ACTIVE)])
     active_power_b = models.FloatField(default=None, validators=[MinValueValidator(MIN_ACTIVE), MaxValueValidator(MAX_ACTIVE)])
-    active_power_c = models.FloatField(default=None. validators=[MinValueValidator(MIN_ACTIVE), MaxValueValidator(MAX_ACTIVE)])
+    active_power_c = models.FloatField(default=None, validators = [MinValueValidator(MIN_ACTIVE), MaxValueValidator(MAX_ACTIVE)])
 
 
 class ReactivePowerMeasurements(Measurements):
@@ -89,9 +90,9 @@ class ApparentPowerMeasurements(Measurements):
     MIN_APARENT = 90.0
     MAX_APPARENT = 120.0
 
-    apparent_power_a = models.FloatField(default=None. validators=[MinValueValidator(0.9), MaxValueValidator(58)])
-    apparent_power_b = models.FloatField(default=None, validators=[MinValueValidator(0.9), MaxValueValidator(58)])
-    apparent_power_c = models.FloatField(default=None, validators=[MinValueValidator(0.9), MaxValueValidator(58)])
+    apparent_power_a = models.FloatField(default=None, validators=[MinValueValidator(MIN_APARENT), MaxValueValidator(MAX_APPARENT)])
+    apparent_power_b = models.FloatField(default=None, validators=[MinValueValidator(MIN_APARENT), MaxValueValidator(MAX_APPARENT)])
+    apparent_power_c = models.FloatField(default=None, validators=[MinValueValidator(MIN_APARENT), MaxValueValidator(MAX_APPARENT)])
 
 
 class EnergyMeasurements(Measurements):
