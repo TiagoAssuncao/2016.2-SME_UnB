@@ -1,9 +1,10 @@
+{% extends 'base.html' %}
+{% load i18n %}
 {% extends 'users/dashboard.html' %}
 
 {% block title %}
-<title>SME - Editar Usuário</title>
+<title>{% trans "Edit User" %}</title>
 {% endblock %}
-
 
 {% block dashboard_content %}
 <div class="jumbotron">
@@ -21,72 +22,57 @@
           <h1> </h1>
           <form class="configdiv" action="register" method="post">
             <p2>{{falha}}</p2>
-
             {% csrf_token %}
             <div class="form-group">
               <input type="text" name= "first_name" placeholder="{{user.first_name}}" class="form-control">
             </div>
-
             <div class="form-group">
               <input type="text" name= "last_name" placeholder="{{user.last_name}}" class="form-control">
             </div>
-
             <div class="form-group">
               <input type="text" name= "email" placeholder="{{user.email}}" class="form-control">
             </div>
-
-
             <div class="form-group">
               <input type="password" name ="password" placeholder="Nova Senha" class="form-control">
             </div>
-
             <div class="form-group">
               <input type="password" name ="confirmPassword" placeholder="confirmar nova senha" class="form-control">
             </div>
-
-            <p1>Tipo de usuario:</p1>
+            <p1>{% trans "User type:" %}</p1>
             <div class="form-group">
               <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Commun User
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> {% trans "Commun User" %}
               </label>
               <label class="radio-inline">
-                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Adiministrator
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> {% trans "Administrator" %}
               </label>
-
             </div>
-
-            <p1>Nivel de acesso:</p1>
+            <p1>{% trans "Access level:" %}"</p1>
             <div class="form-group">
               <div class="checkbox">
                 <label class="checkbox-inline checkbox-success">
-                  <input type="checkbox" id="permissions_checkbox1" name="can_generate" {{can_generate}} > Generate Reports
+                  <input type="checkbox" id="permissions_checkbox1" name="can_generate" {{can_generate}} > {% trans "Generate Reports" %}
                 </label>
               </div>
               <div class="checkbox">
                 <label class="checkbox-inline checkbox-success">
-                  <input type="checkbox" id="permissions_checkbox2" name="view_transductors" {{view_transductors}}> Manage Transductors
+                  <input type="checkbox" id="permissions_checkbox2" name="view_transductors" {{view_transductors}}> {% trans "Manage Transductors" %}
                 </label>
               </div>
               <div class="checkbox">
                 <label class="checkbox-inline checkbox-success">
-                  <input type="checkbox" id="permissions_checkbox3" name="edit_users" {{edit_users}} > Edit Users
+                  <input type="checkbox" id="permissions_checkbox3" name="edit_users" {{edit_users}} > {% trans "Edit Users" %}
                 </label>
               </div>
               <div class="checkbox">
                 <label class="checkbox-inline checkbox-success">
-                  <input type="checkbox" id="permissions_checkbox3" name="delete_users" {{delete_users}}> Delete Users
+                  <input type="checkbox" id="permissions_checkbox3" name="delete_users" {{delete_users}}> {% trans "Delete Users" %}
                 </label>
               </div>
-
-
             </div>
-            <button type="submit" class="btn btn-success" >Register</button>
-
-            <a class="btn btn-primary" href="{% url 'users:list_user_edit' %}" role="button">Cancel</a>
-
-
+            <button type="submit" class="btn btn-success" >{% trans "Register" %}</button>
+            <a class="btn btn-primary" href="{% url 'users:list_user_edit' %}" role="button">{% trans "Cancel" %}</a>
           </form>
-
         </div>
       </div>
     </div>
@@ -103,6 +89,6 @@
   <div class="form-group">
     <input type="password" name ="Password" placeholder="Password" class="form-control">
   </div>
-  <button type="submit" class="btn btn-success">Sign in</button>
+  <button type="submit" class="btn btn-success">{% trans "Sign in" %}</button>
 </form>
 {% endblock %}
