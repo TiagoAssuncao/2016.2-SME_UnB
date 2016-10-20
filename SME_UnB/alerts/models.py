@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from transductor.models import Transductor
+from transductor.models import Transductor, EnergyTransductor
 from django.contrib.auth.models import User
 
 class Alert(models.Model):
@@ -9,7 +9,7 @@ class Alert(models.Model):
     description = models.CharField(max_length=50)
     creation_date = models.DateTimeField('date published')
     priority = models.IntegerField()
-    transductor = models.ForeignKey(Transductor)
+    transductor = models.ForeignKey(EnergyTransductor)
     user = models.ForeignKey(User)
 
     def __init__(self, status, description, creation_date, priority, transductor, user):

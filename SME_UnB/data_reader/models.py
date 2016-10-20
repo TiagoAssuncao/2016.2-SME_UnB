@@ -4,12 +4,18 @@ from django.dispatch import receiver
 from django.db import models
 from django.utils import timezone
 from math import sqrt
+from django.contrib.auth.models import User
+from alerts.models import Alert
 from transductor.models import EnergyTransductor
+
 import socket
 import struct
 import sys
 import thread
 
+LOW = 1
+MEDIUM = 2
+HIGH = 3
 
 class Observer():
     _observers = []
@@ -132,6 +138,35 @@ class CommunicationProtocol(models.Model):
         data.collection_date = collection_time
 
         data.save()
+
+        list_user = User.objects.filter(is_staff=True)
+
+        if data.voltage_a > 250 or data.voltage_b > 250 or data.voltage_c > 250:
+            measurements = {'value_name': 'Voltage', 'vA': data.voltage_a, 'vB': data.voltage_b, 'vC': data.voltage_c}
+            Alert.create_alerts(list_user, False, self._validate_data(measurements), data.transductor)
+
+        if data.current_a > 250 or data.current_b > 250 or data.current_c > 250:
+            measurements = {'value_name': 'Current', 'vA': data.current_a, 'vB': data.current_b, 'vC': data.current_c}
+            Alert.create_alerts(list_user, False, self._validate_data(measurements), data.transductor)
+
+        if data.reactive_power_a > 250 or data.reactive_power_b > 250 or data.reactive_power_c > 250:
+            measurements = {'value_name': 'Reactive Power', 'vA': data.reactive_power_a, 'vB': data.reactive_power_b, 'vC': data.reactive_power_c}
+            Alert.create_alerts(list_user, False, self._validate_data(measurements), data.transductor)
+
+        if data.active_power_a_a > 250 or data.active_power_b_b > 250 or data.active_power_c_c > 250:
+            measurements = {'value_name': 'Active Power', 'vA': data.active_power_a, 'vB': data.active_power_b, 'vC': data.active_power_c}
+            Alert.create_alerts(list_user, False, self._validate_data(measurements), data.transductor)
+
+        if data.apparent_power_a > 250 or data.apparent_power_b > 250 or data.apparent_power_c > 250:
+            measurements = {'value_name': 'Apparent Power', 'vA': data.apparent_power_a, 'vB': data.apparent_power_b, 'vC': data.apparent_power_c}
+            Alert.create_alerts(list_user, False, self._validate_data(measurements), data.transductor)
+
+    def _validate_data(measurements):
+        message = measurements['value_name'] + " is too high: \n" + \
+                  measurements['value_name'] + " A: " + str(measurements['vA']) + "\n" + \
+                  measurements['value_name'] + " B: " + str(measurements['vB']) + "\n" + \
+                  measurements['value_name'] + " C: " + str(measurements['vC'])
+        return message
 
     def _get_float_value_from_response(self, message_received_data):
         n_bytes = struct.unpack("1B", message_received_data[2])[0]

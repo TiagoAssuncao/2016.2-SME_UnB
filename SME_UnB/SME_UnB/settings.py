@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'users',
     'report',
     'django_nose',
+    'alerts',
 ]
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
